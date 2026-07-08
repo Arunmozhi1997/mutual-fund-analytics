@@ -4,13 +4,5 @@ __pycache__/
 
 *.pyc
 
-data/raw/*.csv
-data/processed/*.csv
-# SQLite database
-*.db
-
-# Log files
-logs/*.log
-
 # PowerPoint temporary files
 ~$*.pptx
