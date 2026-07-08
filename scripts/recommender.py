@@ -1,4 +1,5 @@
 import pandas as pd
+
 sharpe=pd.read_csv(r"C:\Users\HP\OneDrive\Documents\mutual-fund-analytics\data\processed\sharpe_ratio.csv")
 fund=pd.read_csv(r"C:\Users\HP\OneDrive\Documents\mutual-fund-analytics\data\processed\fund_master_clean.csv")
 recommendation_data = sharpe.merge(
@@ -19,7 +20,7 @@ recommendations = (
     .head(3)
 )
 
-# Print result
+# result
 if recommendations.empty:
     print("\nNo funds found for this risk appetite.")
 else:
