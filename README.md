@@ -49,7 +49,7 @@ mutual-fund-analytics/
 ├── data/
 ├── reports/
 ├── simulations/
-└── screenshots/
+
 ```
 
 ---
