@@ -43,12 +43,58 @@ The dashboard allows users to analyze mutual fund performance, compare returns, 
 ```text
 mutual-fund-analytics/
 │
-├── app.py
-├── requirements.txt
-├── README.md
+├── dashboard/
+│   ├── app.py                          # Streamlit Dashboard
+│   ├── bluestock_mf_dashboards.pbix    # Power BI Dashboard
+│   ├── Dashboard.pdf
+│   ├── Page1_IndustryOverview.png
+│   ├── Page2_FundPerformance.png
+│   ├── Page3_InvestorAnalytics.png
+│   ├── Page4_SIPMarketTrends.png
+│   └── Page5_NAVDetails.png
+│
 ├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── db/
+│       └── bluestock_mf.db
+│
+├── logs/
+│
+├── notebooks/
+│   ├── 01_data_ingestion.ipynb
+│   ├── 02_data_cleaning.ipynb
+│   ├── 03_eda_analysis.ipynb
+│   ├── 04_performance_analytics.ipynb
+│   └── 05_advanced_analytics.ipynb
+│
 ├── reports/
+│   ├── charts/
+│   ├── email_reports.py
+│   ├── weekly_report.html
+│   ├── Final_Report.md
+│   ├── Final_Report.pdf
+│   └── Presentation.pptx
+│
+├── scripts/
+│   ├── etl_pipeline.py
+│   ├── create_sqlite_db.py
+│   ├── compute_metrics.py
+│   ├── live_nav_fetch.py
+│   └── recommender.py
+│
 ├── simulations/
+│   ├── monte_carlo_nav.py
+│   └── portfolio_optimization.py
+│
+├── sql/
+│   ├── schema.sql
+│   └── queries.sql
+│
+├── requirements.txt
+├── .gitignore
+└── README.md 
+```imulations/
 
 ```
 
