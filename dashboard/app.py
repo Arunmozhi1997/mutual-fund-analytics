@@ -5,6 +5,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+
+
 # -----------------------------
 # Page Configuration
 # -----------------------------
@@ -298,3 +300,17 @@ st.download_button(
     file_name="filtered_mutual_funds.csv",
     mime="text/csv"
 )
+
+st.markdown("---")
+st.header("📄 Weekly Mutual Fund Report")
+
+report_path = "reports/weekly_report.html"
+
+try:
+    with open(report_path, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    st.components.v1.html(html, height=700, scrolling=True)
+
+except FileNotFoundError:
+    st.error("Weekly report not found. Please generate the report first.")
