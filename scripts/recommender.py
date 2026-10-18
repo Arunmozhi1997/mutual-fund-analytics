@@ -1,7 +1,9 @@
+import os
 import pandas as pd
 
-sharpe=pd.read_csv(r"C:\Users\HP\OneDrive\Documents\mutual-fund-analytics\data\processed\sharpe_ratio.csv")
-fund=pd.read_csv(r"C:\Users\HP\OneDrive\Documents\mutual-fund-analytics\data\processed\fund_master_clean.csv")
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "processed")
+sharpe = pd.read_csv(os.path.join(DATA_DIR, "sharpe_ratio.csv"))
+fund = pd.read_csv(os.path.join(DATA_DIR, "fund_master_clean.csv"))
 recommendation_data = sharpe.merge(
     fund[["amfi_code", "risk_category"]],
     on="amfi_code",
